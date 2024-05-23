@@ -13,7 +13,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'Get Weather'
-        run: bash ./weather.sh
+        run: bash .github/workflows/weather.sh
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/YULIN' date '+%Y-%m-%d')" >> $GITHUB_ENV
       - name: 'Send mail'
