@@ -11,10 +11,9 @@ load_dotenv()
 async def send_message( context):
 
     bot_token = os.getenv('bot_token')
-    print(bot_token)
-    # chat_id = os.getenv('chat_id')
-    bot_token = "7783935901:AAFAN2QNWeN7dOtdmJF0qnNPnEiCnUc_DX8"
-    chat_id = "7100950465"
+    chat_id = os.getenv('chat_id')
+    # bot_token = "7783935901:AAFAN2QNWeN7dOtdmJF0qnNPnEiCnUc_DX8"
+    # chat_id = "7100950465"
     bot = telegram.Bot(token=bot_token)
     await bot.sendMessage(chat_id=chat_id, text=context)
 
@@ -57,9 +56,8 @@ def  request_check_in(email, psd):
 
 
 if __name__ == '__main__':
-    # emails=os.getenv('email')
-    # json_data = json.loads(emails)
-    emaillsit = ['3329334227@qq.com','huuxjian@gmail.com']
+    emails=os.getenv('email')
+    json_data = json.loads(emails)
     psd = '123456789'
-    for e in emaillsit:
+    for e in json_data:
         request_check_in(e, psd)
