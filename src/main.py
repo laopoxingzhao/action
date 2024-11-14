@@ -10,7 +10,8 @@ load_dotenv()
 
 async def send_message( context):
 
-    # bot_token = os.getenv('bot_token')
+    bot_token = os.getenv('bot_token')
+    print(bot_token)
     # chat_id = os.getenv('chat_id')
     bot_token = "7783935901:AAFAN2QNWeN7dOtdmJF0qnNPnEiCnUc_DX8"
     chat_id = "7100950465"
