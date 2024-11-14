@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Get env'
-        run: echo  ${{ secrets.MAIL_USERNAMEEMIALANDTELEGRAMBOT }} >> ..\src\.env
+        run: echo  ${{ secrets.MAIL_USERNAMEEMIALANDTELEGRAMBOT }} >> ../src/.env
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: '3.12.0'
-      - run: pip install -r .\src\requirements.txt
+      - run: pip install -r ./src/requirements.txt
       - run: python src/main.py
