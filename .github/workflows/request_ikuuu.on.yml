@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Get env'
-        run: echo -e "${{ secrets.EMIALANDTELEGRAMBOT }}" > .env
+        run: echo -e "${{ secrets.EMIALANDTELEGRAMBOT }}" > ./src/.env
       - run: cat .env
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
