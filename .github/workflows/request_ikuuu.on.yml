@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: 'Get env'
         run: echo -e "${{ secrets.EMIALANDTELEGRAMBOT }}" > .env
+      - run cat .env
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
