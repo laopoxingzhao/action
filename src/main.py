@@ -5,16 +5,13 @@ import os
 import asyncio
 import json
 import  telegram
-
+load_dotenv()
 
 
 async def send_message( context):
 
     bot_token = os.getenv('bot_token')
     chat_id = os.getenv('chat_id')
-    print('dddddddddddddd', bot_token)
-    # bot_token = "7783935901:AAFAN2QNWeN7dOtdmJF0qnNPnEiCnUc_DX8"
-    # chat_id = "7100950465"
     bot = telegram.Bot(token=bot_token)
     await bot.sendMessage(chat_id=chat_id, text=context)
 
@@ -54,7 +51,6 @@ def  request_check_in(email, psd):
 
 
 if __name__ == '__main__':
-    load_dotenv()
     emails=os.getenv('email')
     json_data = json.loads(emails)
     psd = '123456789'
